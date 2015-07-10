@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>DialogsPage.qml</file>
+        <file>icons/arrow_back.svg</file>
+        <file>icons/apps.svg</file>
+        <file>icons/more_vert.svg</file>
+        <file>icons/hamburger.svg</file>
+    </qresource>
+</RCC>

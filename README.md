@@ -1,2 +1,3 @@
-# mut
-A Qt/QML UI toolkit focused
+# Mut
+
+A Qt/QML UI toolkit
