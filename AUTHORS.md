@@ -1,5 +1,5 @@
 Authors
 -------
 
-Federico Frenguelli
-Emanuele Palazzetti
+* Federico Frenguelli
+* Emanuele Palazzetti
