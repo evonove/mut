@@ -26,6 +26,7 @@ Item {
         id: __overlay
         anchors.fill: image
         source: image
+        cached: true
 
         color: Qt.rgba(colorOverlay.r, colorOverlay.g, colorOverlay.b)
         opacity: colorOverlay.a
