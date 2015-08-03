@@ -42,30 +42,30 @@ Item {
         function test_no_components() {
             layout.layouts = []
             layout.when = -1
-            compare(layout.currentLayout, null);
+            compare(layout.activeComponent, null);
         }
 
         /* it should draw the first layout */
         function test_one_layout() {
             layout.layouts = [first_layout]
             layout.when = 0
-            compare(layout.currentLayout, first_layout);
+            compare(layout.activeComponent, first_layout);
         }
 
         /* it should draw the first layout and the second when 'when' property changes */
         function test_layout_switching() {
             layout.layouts = [first_layout, second_layout]
             layout.when = 0
-            compare(layout.currentLayout, first_layout);
+            compare(layout.activeComponent, first_layout);
             layout.when = 1
-            compare(layout.currentLayout, second_layout);
+            compare(layout.activeComponent, second_layout);
         }
 
         /* it should fallback to a previous layout if the chosen is not available */
         function test_layout_fallback() {
             layout.layouts = [first_layout, second_layout]
             layout.when = 4
-            compare(layout.currentLayout, second_layout);
+            compare(layout.activeComponent, second_layout);
         }
     }
 }

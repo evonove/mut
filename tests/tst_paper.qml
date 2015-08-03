@@ -29,12 +29,13 @@ TestCase {
         var tmp = Qt.createQmlObject(
             'import Mut 0.1; Paper {id: paper1}',
             testCase, '');
-        compare(tmp.children[0].glowRadius, 0);  // topEffect
-        compare(tmp.children[1].glowRadius, 0);  // bottomEffect
+        tmp.elevation = 0.0;
+        compare(tmp.children[1].glowRadius, 0);  // topEffect
+        compare(tmp.children[2].glowRadius, 0);  // bottomEffect
 
         tmp.elevation = 1.0;
-        compare(tmp.children[0].glowRadius, 2.0);  // topEffect
-        compare(tmp.children[1].glowRadius, 1.0);  // bottomEffect
+        compare(tmp.children[1].glowRadius, 2.0);  // topEffect
+        compare(tmp.children[2].glowRadius, 1.0);  // bottomEffect
 
         tmp.destroy();
     }

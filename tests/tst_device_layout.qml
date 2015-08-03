@@ -38,7 +38,7 @@ Item {
 
     TestCase {
         id: testCase
-        name: "Tests_OrientationLayout"
+        name: "Tests_DeviceLayout"
         when: windowShown
         width: 300; height: 300
 
@@ -50,17 +50,17 @@ Item {
         /* it should use the right layout according to device size */
         function test_size_layout() {
             Device.size = Device.sizeSmall;
-            compare(layout.currentLayout, small);
+            compare(layout.activeComponent, small);
             Device.size = Device.sizeNormal;
-            compare(layout.currentLayout, normal);
+            compare(layout.activeComponent, normal);
             Device.size = Device.sizeLarge;
-            compare(layout.currentLayout, large);
+            compare(layout.activeComponent, large);
         }
 
         /* it should use the layout that best fits the device size */
         function test_size_fallback_layout() {
             Device.size = Device.sizeXLarge;
-            compare(layout.currentLayout, large);
+            compare(layout.activeComponent, large);
         }
     }
 }

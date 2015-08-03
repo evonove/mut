@@ -42,13 +42,13 @@ Item {
         /* it should use the portrait layout when in portrait mode */
         function test_portrait_layout() {
             Device.primaryOrientation = Qt.PortraitOrientation
-            compare(layout.currentLayout, portrait);
+            compare(layout.activeComponent, portrait);
         }
 
         /* it should use the landscape layout when in landscape mode */
         function test_landscape_layout() {
             Device.primaryOrientation = Qt.LandscapeOrientation
-            compare(layout.currentLayout, landscape);
+            compare(layout.activeComponent, landscape);
         }
     }
 }

@@ -49,7 +49,8 @@ FocusScope {
     property list<Component> layouts
     property int when: -1
 
-    property alias currentLayout: __layoutLoader.sourceComponent
+    property alias activeComponent: __layoutLoader.sourceComponent
+    property alias activeLayout: __layoutLoader.item
 
     Loader {
         id: __layoutLoader
