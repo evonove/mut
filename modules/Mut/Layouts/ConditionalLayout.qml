@@ -55,6 +55,7 @@ FocusScope {
     Loader {
         id: __layoutLoader
         anchors.fill: parent
+        active: root.when >= 0
         sourceComponent: layoutSelection()
     }
 
