@@ -33,6 +33,8 @@ FocusScope {
     visible: root.opacity != 0.0
     enabled: root.opacity != 0.0
 
+    property alias background: __background
+
     signal clicked()
 
     MouseArea {
@@ -43,6 +45,7 @@ FocusScope {
     }
 
     Rectangle {
+        id: __background
         color: "#000000"
         opacity: 0.54
         anchors.fill: parent

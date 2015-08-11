@@ -8,6 +8,7 @@ singleton Device 0.1 Device.qml
 Icon 0.1 Icon.qml
 Page 0.1 Page.qml
 Paper 0.1 Paper.qml
+Popup 0.1 Popup.qml
 Card 0.1 Card.qml
 Surface 0.1 Surface.qml
 ToolBar 0.1 ToolBar.qml
