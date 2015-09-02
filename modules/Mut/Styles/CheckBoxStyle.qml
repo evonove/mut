@@ -2,11 +2,13 @@ import QtQuick 2.5
 import QtQuick.Controls.Styles 1.3
 import QtQuick.Controls 1.3 
 import Mut 0.1
+import Mut.Themes 0.1
 
 CheckBoxStyle {
-    id: style
+    id: root 
 
     spacing: 0
+    property CheckBoxPalette palette: Theme.p.checkBox
 
     label: Rectangle {
         id: labelRectangle
@@ -34,13 +36,13 @@ CheckBoxStyle {
         Rectangle {
             id: indicatorRect
 
-            color: control.checked ? "#0D9B56" : "transparent"
+            color: control.checked ? root.palette.backgroundSelected : root.palette.backgroundUnselected
 
             anchors.centerIn: parent
             anchors.right: text.left
 
             border.width: Units.dp(2)
-            border.color: control.checked ? "#0D9B56" : "#7B7B7B" 
+            border.color: control.checked ? root.palette.borderSelected : root.palette.borderUnselected 
 
             width: Units.dp(18)
             height: width

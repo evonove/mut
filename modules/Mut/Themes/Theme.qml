@@ -105,6 +105,13 @@ QtObject {
             trackOff: palette.dark.disabled
             trackDisabled: palette.dark.divider
         }
+
+        property CheckBoxPalette checkBox: CheckBoxPalette {
+            backgroundSelected: "#0D9B56" 
+            backgroundUnselected: "#FFFFFF"
+            borderSelected: "#0D9B56"
+            borderUnselected: "#7B7B7B"
+        }
     }
 
     function image(name) {
