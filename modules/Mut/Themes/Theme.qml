@@ -107,9 +107,9 @@ QtObject {
         }
 
         property CheckBoxPalette checkBox: CheckBoxPalette {
-            backgroundSelected: "#0D9B56" 
-            backgroundUnselected: "#FFFFFF"
-            borderSelected: "#0D9B56"
+            backgroundSelected: palette.accent
+            backgroundUnselected: "transparent"
+            borderSelected: palette.accent
             borderUnselected: "#7B7B7B"
         }
     }
