@@ -6,7 +6,6 @@ import Mut 0.1
 CheckBoxStyle {
     id: style
 
-    property color color: "black"
     spacing: 0
 
     label: Rectangle {
@@ -21,8 +20,6 @@ CheckBoxStyle {
             MouseArea {
                 anchors.fill: parent
                 onClicked: control.checked = !control.checked
-                onPressed: labelRectangle.color = "black"
-                onReleased: labelRectangle.color = "white"
             }
         }
     }
@@ -63,9 +60,8 @@ CheckBoxStyle {
                 }
             }
 
-            Item {
-                id: container
-
+            Image {
+                source: control.source 
                 anchors.centerIn: indicatorRect
 
                 height: parent.height
@@ -73,75 +69,12 @@ CheckBoxStyle {
 
                 opacity: control.checked ? 1 : 0
 
-                property int thickness: Units.dp(3)
-
                 Behavior on opacity {
                     NumberAnimation {
                         easing.type: Easing.InOutQuad
                         duration: 200
                     }
                 }
-
-                Rectangle {
-                    id: vert
-
-                    anchors {
-                        top: parent.top
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-
-                    radius: Units.dp(1)
-                    color: "#FFFFFF"
-                    width: container.thickness * 2
-                }
-
-                Rectangle {
-                    anchors {
-                        left: parent.left
-                        right: parent.right
-                        bottom: parent.bottom
-                    }
-
-                    radius: Units.dp(1)
-                    color: "#FFFFFF"
-                    height: container.thickness
-
-                }
-
-                transform: [
-                    Scale {
-                        origin { x: container.width / 2; y: container.height / 2 }
-                        xScale: 0.5
-                        yScale: 1
-                    },
-                    Rotation {
-                        origin { x: container.width / 2; y: container.height / 2 }
-                        angle: 45;
-                    },
-                    Scale {
-                        id: widthScale
-
-                        origin { x: container.width / 2; y: container.height / 2 }
-                        xScale: control.checked ? 0.6 : 0.2
-                        yScale: control.checked ? 0.6 : 0.2
-
-                        Behavior on xScale {
-                            NumberAnimation {
-                                easing.type: Easing.InOutQuad
-                                duration: 200
-                            }
-                        }
-
-                        Behavior on yScale {
-                            NumberAnimation {
-                                easing.type: Easing.InOutQuad
-                                duration: 200
-                            }
-                        }
-                    },
-                    Translate { y: -(container.height - (container.height * 0.9)) }
-                ]
             }
         }
     }
