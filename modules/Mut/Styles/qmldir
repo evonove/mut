@@ -10,3 +10,4 @@ BaseTextFieldStyle 0.1 BaseTextFieldStyle.qml
 NormalTextFieldStyle 0.1 NormalTextFieldStyle.qml
 FloatingTextFieldStyle 0.1 FloatingTextFieldStyle.qml
 SwitchStyle 0.1 SwitchStyle.qml
+CheckBoxStyle 0.1 CheckBoxStyle.qml
