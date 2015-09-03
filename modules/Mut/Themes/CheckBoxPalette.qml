@@ -7,5 +7,9 @@ QtObject {
     property color backgroundUnselected
     property color borderSelected
     property color borderUnselected
+    property color backgroundSelectedDisabled
+    property color borderSelectedDisabled
+    property color borderUnselectedDisabled
+    property color backgroundUnselectedDisabled
 }
 

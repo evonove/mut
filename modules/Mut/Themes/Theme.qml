@@ -110,7 +110,12 @@ QtObject {
             backgroundSelected: palette.accent
             backgroundUnselected: "transparent"
             borderSelected: palette.accent
-            borderUnselected: "#7B7B7B"
+            borderUnselected: palette.dark.secondaryText
+
+            borderSelectedDisabled: palette.dark.disabled
+            borderUnselectedDisabled: palette.dark.disabled
+            backgroundSelectedDisabled: palette.dark.disabled
+            backgroundUnselectedDisabled: "transparent"
         }
     }
 

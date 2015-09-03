@@ -9,6 +9,7 @@ CheckBoxStyle {
 
     spacing: 0
     property CheckBoxPalette palette: Theme.p.checkBox
+    property bool disabled
 
     label: Rectangle {
         id: labelRectangle
@@ -62,14 +63,15 @@ CheckBoxStyle {
                 }
             }
 
-            Image {
-                source: control.source 
-                anchors.centerIn: indicatorRect
-
-                height: parent.height
-                width: parent.width
-
-                opacity: control.checked ? 1 : 0
+            Icon {
+                anchors.centerIn: parent
+                image.source: Theme.image("done.svg")
+                image.visible: true
+                image.smooth: true
+                image.opacity: control.checked ? 1 : 0
+                image.width: Units.dp(17)
+                image.height: Units.dp(17)
+                colorOverlay: "#FFFFFF"
 
                 Behavior on opacity {
                     NumberAnimation {
