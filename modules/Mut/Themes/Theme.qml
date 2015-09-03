@@ -116,6 +116,8 @@ QtObject {
             borderUnselectedDisabled: palette.dark.disabled
             backgroundSelectedDisabled: palette.dark.disabled
             backgroundUnselectedDisabled: "transparent"
+
+            iconOverlay: "#FFFFFF"
         }
     }
 

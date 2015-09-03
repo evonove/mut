@@ -71,7 +71,7 @@ CheckBoxStyle {
                 image.opacity: control.checked ? 1 : 0
                 image.width: Units.dp(17)
                 image.height: Units.dp(17)
-                colorOverlay: "#FFFFFF"
+                colorOverlay: root.palette.iconOverlay
 
                 Behavior on opacity {
                     NumberAnimation {
