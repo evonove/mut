@@ -36,12 +36,11 @@ CheckBoxStyle {
         }
     }
     
-
     indicator: Item {
         id: parentRect
             
         implicitWidth: Units.dp(48)
-        implicitHeight: implicitWidth
+        implicitHeight: Units.dp(48)
 
         Rectangle {
             id: indicatorRect
@@ -54,7 +53,7 @@ CheckBoxStyle {
             border.color: root.borderColor
 
             width: Units.dp(18)
-            height: width
+            height: Units.dp(18)
             radius: Units.dp(2)
 
             Behavior on color {
@@ -73,7 +72,6 @@ CheckBoxStyle {
                 image.width: Units.dp(17)
                 image.height: Units.dp(17)
                 colorOverlay: root.palette.iconOverlay
-
             }
         }
     }
