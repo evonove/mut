@@ -190,6 +190,21 @@ ApplicationWindow {
                         enabled: false
                         style: SwitchStyle {}
                     }
+                    CheckBox {
+                        style: CheckBoxStyle {}
+                        text: "Enabled"
+                    }
+                    CheckBox {
+                        style: CheckBoxStyle {}
+                        enabled: false
+                        text: "Disabled"
+                    }
+                    CheckBox {
+                        style: CheckBoxStyle {}
+                        enabled: false
+                        checked: true
+                        text: "Disabled checked"
+                    }
                     Rectangle {
                         width: Units.dp(48); height: Units.dp(48)
                         color: "blue"

@@ -6,5 +6,6 @@
         <file>icons/apps.svg</file>
         <file>icons/more_vert.svg</file>
         <file>icons/hamburger.svg</file>
+        <file>icons/done.svg</file>
     </qresource>
 </RCC>

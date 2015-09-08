@@ -109,15 +109,12 @@ QtObject {
         property CheckBoxPalette checkBox: CheckBoxPalette {
             backgroundSelected: palette.accent
             backgroundUnselected: "transparent"
-            borderSelected: palette.accent
-            borderUnselected: palette.dark.secondaryText
-
-            borderSelectedDisabled: palette.dark.disabled
-            borderUnselectedDisabled: palette.dark.disabled
             backgroundSelectedDisabled: palette.dark.disabled
-            backgroundUnselectedDisabled: "transparent"
 
-            iconOverlay: "#FFFFFF"
+            borderEnabled: palette.dark.secondaryText
+            borderDisabled: palette.dark.disabled
+
+            iconOverlay: "transparent"
         }
     }
 

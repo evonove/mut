@@ -5,13 +5,10 @@ QtObject {
 
     property color backgroundSelected
     property color backgroundUnselected
-    property color borderSelected
-    property color borderUnselected
-    
     property color backgroundSelectedDisabled
-    property color backgroundUnselectedDisabled
-    property color borderSelectedDisabled
-    property color borderUnselectedDisabled
+
+    property color borderEnabled
+    property color borderDisabled
 
     property color iconOverlay
 }

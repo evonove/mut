@@ -9,7 +9,16 @@ CheckBoxStyle {
 
     spacing: 0
     property CheckBoxPalette palette: Theme.p.checkBox
-    property bool disabled
+    property color backgroundColor: {
+        control.checked ?
+            control.enabled ? palette.backgroundSelected : palette.backgroundSelectedDisabled
+        : palette.backgroundUnselected
+    }
+
+    property color borderColor: {
+        control.checked ? palette.backgroundUnselected :
+        control.enabled ? palette.borderEnabled : palette.borderDisabled
+    }
 
     label: Rectangle {
         id: labelRectangle
@@ -37,26 +46,18 @@ CheckBoxStyle {
         Rectangle {
             id: indicatorRect
 
-            color: control.checked ? root.palette.backgroundSelected : root.palette.backgroundUnselected
+            color: root.backgroundColor
 
             anchors.centerIn: parent
-            anchors.right: text.left
 
             border.width: Units.dp(2)
-            border.color: control.checked ? root.palette.borderSelected : root.palette.borderUnselected 
+            border.color: root.borderColor
 
             width: Units.dp(18)
             height: width
             radius: Units.dp(2)
 
             Behavior on color {
-                ColorAnimation {
-                    easing.type: Easing.InOutQuad
-                    duration: 200
-                }
-            }
-
-            Behavior on border.color {
                 ColorAnimation {
                     easing.type: Easing.InOutQuad
                     duration: 200
@@ -73,12 +74,6 @@ CheckBoxStyle {
                 image.height: Units.dp(17)
                 colorOverlay: root.palette.iconOverlay
 
-                Behavior on opacity {
-                    NumberAnimation {
-                        easing.type: Easing.InOutQuad
-                        duration: 200
-                    }
-                }
             }
         }
     }
