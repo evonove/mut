@@ -58,6 +58,8 @@ FocusScope {
     implicitWidth: parent.width
 
     property alias backgroundColor: background.color
+    property alias primaryItem: __primary.item
+    property alias secondaryItem: __secondary.item
     property Component primaryComponent
     property Component secondaryComponent
 
