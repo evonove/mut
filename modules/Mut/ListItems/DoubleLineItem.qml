@@ -3,7 +3,7 @@ import QtQuick.Controls 1.3
 
 import Mut 0.1
 import Mut.Themes 0.1
-import Mu.Styles 0.1
+import Mut.Styles 0.1
 
 Tile {
     id: root
