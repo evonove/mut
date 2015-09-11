@@ -2,3 +2,4 @@ module Mut.ListItems
 ListView 0.1 ListView.qml
 Tile 0.1 Tile.qml
 SingleLineItem 0.1 SingleLineItem.qml
+DoubleLineItem 0.1 DoubleLineItem.qml

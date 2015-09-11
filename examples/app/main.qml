@@ -205,6 +205,11 @@ ApplicationWindow {
                         checked: true
                         text: "Disabled checked"
                     }
+                    DoubleLineItem {
+                        primaryText: "TEEXT"
+                        secondaryText: "teeeext"
+                    }
+
                     Rectangle {
                         width: Units.dp(48); height: Units.dp(48)
                         color: "blue"
