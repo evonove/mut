@@ -86,6 +86,12 @@ ApplicationWindow {
                 Action {
                     iconSource: Qt.resolvedUrl("./icons/more_vert.svg")
                     onTriggered: {
+                        push(page2a);
+                    }
+                },
+                Action {
+                    iconSource: Qt.resolvedUrl("./icons/more_vert.svg")
+                    onTriggered: {
                         push(page3);
                     }
                 },
@@ -128,6 +134,18 @@ ApplicationWindow {
                         }
                     }
                 }
+            }
+        }
+    }
+
+    Component {
+        id: page2a
+
+        Page {
+            title: qsTr("Double line items")
+
+            Paper {
+                anchors.fill: parent
 
                 ListView {
                     anchors.fill: parent
@@ -135,20 +153,20 @@ ApplicationWindow {
 
                     delegate: DoubleLineItem {
                             primaryText: "TEEXT"
-                            secondaryText: "teeeext"
+                            secondaryText: "teeeext really i'm a text and i will text you till the text "
                             primaryAction: Action {
-                                iconsSource: Qt.resolvedUrl("./icons/apps.svg")
+                                iconSource: Qt.resolvedUrl("./icons/apps.svg")
                                 onTriggered: console.log("Primary action")
                             }
                             secondaryAction: Action {
+                                iconSource: Qt.resolvedUrl("./icons/apps.svg")
                                 onTriggered: console.log("Secondary action")
                             }
                         }
-
                     }
+                }
             }
         }
-    }
 
     Component {
         id: page3

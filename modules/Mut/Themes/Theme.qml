@@ -25,6 +25,7 @@ QtObject {
         accentDark: "#c51162"
 
         textPrimary: palette.light.text
+        textSecondary: palette.dark.secondaryText
 
         property ElementPalette light: ElementPalette {
             text: "#ffffff"

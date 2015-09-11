@@ -7,6 +7,7 @@ import Mut.Styles 0.1
 
 Tile {
     id: root
+    height: Units.dp(72)
 
     property string primaryText
     property string secondaryText
@@ -14,6 +15,7 @@ Tile {
     property Action secondaryAction
 
     primaryComponent: Item {
+        anchors.fill: parent
         Icon {
             id: __icon
 
@@ -28,10 +30,14 @@ Tile {
 
         Text {
             id: __primaryText
+            elide: Text.ElideRight
+            width: secondaryAction ? parent.width - Units.dp(48) : parent.width
 
             anchors {
                 left: parent.left
+                baseline: parent.verticalCenter
                 leftMargin: __icon.image.source != Qt.resolvedUrl("") ? Units.dp(56) : 0
+                topMargin: Units.dp(20)
             }
 
             text: root.primaryText
@@ -40,8 +46,15 @@ Tile {
 
         Text {
             id: __secondaryText
+            color: Theme.p.textSecondary
+            width: secondaryAction ? parent.width - Units.dp(48) : parent.width
+            elide: Text.ElideRight
+
             anchors {
                 left: parent.left
+                top: __primaryText.bottom
+                topMargin: Units.dp(5)
+                bottomMargin: Units.dp(20)
                 leftMargin: __icon.image.source != Qt.resolvedUrl("") ? Units.dp(56) : 0
             }
 
@@ -62,6 +75,7 @@ Tile {
 
     Surface {
         anchors.fill: parent
+        anchors.right: secondaryComponent.left
         onClicked: primaryAction.trigger()
     }
 }
