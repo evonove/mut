@@ -128,6 +128,24 @@ ApplicationWindow {
                         }
                     }
                 }
+
+                ListView {
+                    anchors.fill: parent
+                    model: 5
+
+                    delegate: DoubleLineItem {
+                            primaryText: "TEEXT"
+                            secondaryText: "teeeext"
+                            primaryAction: Action {
+                                iconsSource: Qt.resolvedUrl("./icons/apps.svg")
+                                onTriggered: console.log("Primary action")
+                            }
+                            secondaryAction: Action {
+                                onTriggered: console.log("Secondary action")
+                            }
+                        }
+
+                    }
             }
         }
     }
@@ -205,11 +223,6 @@ ApplicationWindow {
                         checked: true
                         text: "Disabled checked"
                     }
-                    DoubleLineItem {
-                        primaryText: "TEEXT"
-                        secondaryText: "teeeext"
-                    }
-
                     Rectangle {
                         width: Units.dp(48); height: Units.dp(48)
                         color: "blue"
