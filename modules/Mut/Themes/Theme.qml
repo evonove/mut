@@ -115,7 +115,7 @@ QtObject {
             borderEnabled: palette.dark.secondaryText
             borderDisabled: palette.dark.disabled
 
-            iconOverlay: "transparent"
+            iconOverlay: palette.light.icon
         }
     }
 

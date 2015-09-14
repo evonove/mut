@@ -65,12 +65,12 @@ CheckBoxStyle {
 
             Icon {
                 anchors.centerIn: parent
-                image.source: Theme.image("done.svg")
+                image.source: Theme.image("check.svg")
                 image.visible: true
                 image.smooth: true
                 image.opacity: control.checked ? 1 : 0
-                image.width: Units.dp(17)
-                image.height: Units.dp(17)
+                image.width: Units.dp(18)
+                image.height: Units.dp(18)
                 colorOverlay: root.palette.iconOverlay
             }
         }
