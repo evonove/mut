@@ -6,7 +6,7 @@ you can provide any customization according to your app brand.
 
 [1]: http://www.google.it/design/spec/material-design/introduction.html
 
-# Implemented components
+## Implemented components
 
 At the moment, the following are the working high-level components:
 
@@ -28,7 +28,7 @@ Any missing component will be released according to our roadmap.
 [7]: http://www.google.it/design/spec/components/text-fields.html
 [8]: http://www.google.it/design/spec/components/toolbars.html
 
-# Roadmap
+## Roadmap
 
 * provide a documentation API for high-level components
 * provide a step-by-step tutorial that guides the developer through the installation and configuration of the MUT plugin
@@ -37,6 +37,6 @@ Any missing component will be released according to our roadmap.
 
 The project is currently in alpha stage and will be available for release late 2015 and early 2016.
 
-# License
+## License
 
 MUT Ui Toolkit is released under the terms of the **MIT license**. Full details in `LICENSE` file.
