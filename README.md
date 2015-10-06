@@ -1,14 +1,14 @@
 # MUT
 
-**M**ut **U**i **T**oolkit is a Qt/QML components collection, based on Google [Material Design specifications][1].
-Using a theme centric approach you can improve the quality of your applications using the default material theme, or
-you can provide any customization according to your app brand.
+**M**UT **U**i **T**oolkit is a Qt/QML components collection, based on Google [Material Design specifications][1].
+Using a theme centric approach you can improve the look and feel of your applications using the default material theme, or
+you can apply any customization according to your application brand.
 
 [1]: http://www.google.it/design/spec/material-design/introduction.html
 
 ## Implemented components
 
-At the moment, the following are the working high-level components:
+At the moment, the following high-level components are provided:
 
 * [standard and floating buttons][2]
 * [cards][3]
@@ -18,7 +18,7 @@ At the moment, the following are the working high-level components:
 * [standard and floating labels textfield][7]
 * [actions toolbar][8]
 
-Any missing component will be released according to our roadmap.
+Any missing component will be released soon according to our roadmap.
 
 [2]: http://www.google.it/design/spec/components/buttons.html
 [3]: http://www.google.it/design/spec/components/cards.html
@@ -30,12 +30,12 @@ Any missing component will be released according to our roadmap.
 
 ## Roadmap
 
-* provide a documentation API for high-level components
-* provide a step-by-step tutorial that guides the developer through the installation and configuration of the MUT plugin
-* provide a documentation API for low-level components (such as Tiles) for application customization
-* develop all missing material components
+* provide a high-level documentation for material components APIs
+* provide a step-by-step tutorial that shows how to install and configure MUT
+* provide a low-level documentation for material components (such as Tiles) for major customizations
+* provide all missing material components
 
-The project is currently in alpha stage and will be available for release late 2015 and early 2016.
+The project is currently in alpha stage and will be available for **release late 2015 - early 2016**.
 
 ## License
 
