@@ -25,23 +25,14 @@ ApplicationWindow {
 
     property list<Action> actions: [
         Action {
-            text: "Item 1"
-            iconSource: Qt.resolvedUrl("./icons/apps.svg")
-            onTriggered: {
-                console.log("NavDrawer action 1");
-            }
-        },
-        Action {
-            text: "Item 2"
-            iconSource: Qt.resolvedUrl("./icons/hamburger.svg")
-            onTriggered: {
-                console.log("NavDrawer action 2");
-            }
-        },
-        Action {
             text: "Dialogs"
             iconSource: Qt.resolvedUrl("./icons/hamburger.svg")
             onTriggered: pageStack.push(Qt.resolvedUrl("DialogsPage.qml"))
+        },
+        Action {
+            text: "App Bar Customization"
+            iconSource: Qt.resolvedUrl("./icons/hamburger.svg")
+            onTriggered: pageStack.push(Qt.resolvedUrl("CustomAppBar.qml"))
         }
     ]
 
@@ -66,7 +57,7 @@ ApplicationWindow {
         Page {
             title: qsTr("NavDrawer")
 
-            navAction: Action {
+            appBarItems.navAction: Action {
                 iconSource: Qt.resolvedUrl("./icons/hamburger.svg")
                 onTriggered: {
                     drawer.toggle();

@@ -7,12 +7,22 @@ FocusScope {
     id: root
 
     property string title
+
     property list<Action> actions
 
-    property var navHandler: function () { root.pop(); };
     property Action navAction: Action {
         iconSource: Theme.image("arrow_back.svg")
         onTriggered: root.navHandler()
+    }
+    property var navHandler: function () { root.pop(); };
+
+    property alias appBarItems: __appBarItems
+
+    AppBarItems {
+        id: __appBarItems
+
+        navAction: root.navAction
+        actions: root.actions
     }
 
     /*! Push a new component into the stack */

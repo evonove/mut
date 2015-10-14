@@ -1,6 +1,7 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
+        <file>CustomAppBar.qml</file>
         <file>DialogsPage.qml</file>
         <file>icons/arrow_back.svg</file>
         <file>icons/apps.svg</file>

@@ -15,6 +15,9 @@ ToolBar {
 
     property Action defaultNavAction: null
 
+    property Action __navAction: page && page.appBarItems.navAction ? page.appBarItems.navAction
+                                                                    : root.defaultNavAction
+
     implicitHeight: {
         if (Device.size >= Device.sizeLarge) {
             Units.dp(64);
@@ -33,7 +36,7 @@ ToolBar {
         anchors.verticalCenter: parent.verticalCenter
         spacing: Units.dp(1)
         Button {
-            action: page && page.navAction ? page.navAction : root.defaultNavAction
+            action: root.__navAction
             style: ToolButtonStyle {}
         }
         Text {
@@ -48,7 +51,7 @@ ToolBar {
         }
 
         Repeater {
-            model: page ? page.actions : null
+            model: page ? page.appBarItems.actions : null
             Button {
                 action: modelData
                 style: ToolButtonStyle {}
