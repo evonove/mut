@@ -18,48 +18,39 @@ Tile {
         anchors.fill: parent
         Icon {
             id: __icon
+            visible: root.primaryAction
 
             anchors {
                 verticalCenter: parent.verticalCenter
                 left: parent.left
             }
 
-            image.source: root.primaryAction.iconSource
+            image.source: root.primaryAction ? root.primaryAction.iconSource : ""
             colorOverlay: Theme.p.dark.icon
         }
 
-        Text {
-            id: __primaryText
-            elide: Text.ElideRight
+        Column {
+            anchors.verticalCenter: parent.verticalCenter
             width: secondaryAction ? parent.width - Units.dp(48) : parent.width
 
-            anchors {
-                left: parent.left
-                baseline: parent.verticalCenter
-                leftMargin: __icon.image.source != Qt.resolvedUrl("") ? Units.dp(56) : 0
-                topMargin: Units.dp(20)
+            Text {
+                id: __primaryText
+                elide: Text.ElideRight
+                width: parent.width
+
+                text: root.primaryText
+                font.pixelSize: Units.sp(16)
             }
 
-            text: root.primaryText
-            font.pixelSize: Units.sp(16)
-        }
+            Text {
+                id: __secondaryText
+                color: Theme.p.textSecondary
+                width: parent.width
+                elide: Text.ElideRight
 
-        Text {
-            id: __secondaryText
-            color: Theme.p.textSecondary
-            width: secondaryAction ? parent.width - Units.dp(48) : parent.width
-            elide: Text.ElideRight
-
-            anchors {
-                left: parent.left
-                top: __primaryText.bottom
-                topMargin: Units.dp(5)
-                bottomMargin: Units.dp(20)
-                leftMargin: __icon.image.source != Qt.resolvedUrl("") ? Units.dp(56) : 0
+                text: root.secondaryText
+                font.pixelSize: Units.dp(14)
             }
-
-            text: root.secondaryText
-            font.pixelSize: Units.dp(14)
         }
     }
 
@@ -77,6 +68,8 @@ Tile {
         anchors.fill: parent
         anchors.right: secondaryComponent.left
         onClicked: primaryAction.trigger()
+        enabled: root.primaryAction
+        visible: enabled
     }
 }
 
