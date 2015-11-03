@@ -59,29 +59,28 @@ Tile {
     property Action secondaryAction
 
     primaryComponent: Item {
-        Icon {
-            id: __icon
+        Row {
+            anchors.fill: parent
 
-            anchors {
-                verticalCenter: parent.verticalCenter
-                left: parent.left
+            spacing: Units.dp(16)
+            Icon {
+                id: __icon
+                visible: root.primaryAction
+
+                anchors.verticalCenter: parent.verticalCenter
+                image.source: root.primaryAction.iconSource
+                colorOverlay: Theme.p.dark.icon
             }
 
-            image.source: root.primaryAction.iconSource
-            colorOverlay: Theme.p.dark.icon
-        }
+            Text {
+                id: __text
 
-        Text {
-            id: __text
-
-            anchors {
-                left: parent.left
-                verticalCenter: parent.verticalCenter
-                leftMargin: __icon.image.source != Qt.resolvedUrl("") ? Units.dp(56) : 0
+                anchors.verticalCenter: parent.verticalCenter
+                width: parent.width - __icon.width
+                text: root.text
+                elide: Text.ElideRight
+                font.pixelSize: Units.sp(16)
             }
-
-            text: root.text
-            font.pixelSize: Units.sp(16)
         }
     }
 

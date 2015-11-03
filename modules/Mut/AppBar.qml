@@ -39,6 +39,7 @@ ToolBar {
         Text {
             id: title
             text: page ? page.title : ""
+            elide: Text.ElideRight
             color: Theme.p.textPrimary
             font {
                 pixelSize: Units.sp(20)
