@@ -12,6 +12,10 @@ QtObject {
     /*! System pixel density. Usually this is Screen.pixelDensity */
     property real pixelDensity;
 
+    function factor() {
+        return (pixelDensity*25.4)/160;
+    }
+
     /*! Method to compute component size using device independent pixels */
     function dp(number) {
         return Math.round(number*((pixelDensity*25.4)/160));
